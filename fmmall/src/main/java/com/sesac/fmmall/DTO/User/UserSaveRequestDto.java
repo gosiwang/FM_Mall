@@ -1,4 +1,4 @@
-package com.sesac.fmmall.DTO.Product;
+package com.sesac.fmmall.DTO.User;
 
 import com.sesac.fmmall.Entity.User;
 import com.sesac.fmmall.Constant.UserRole;
