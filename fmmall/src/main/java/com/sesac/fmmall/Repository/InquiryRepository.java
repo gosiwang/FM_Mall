@@ -8,9 +8,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.time.LocalDateTime;
 
 public interface InquiryRepository extends JpaRepository<Inquiry, Integer> {
-    /* 전달 받은 정렬 기준으로 조회 (페이징) */
-    Page<Inquiry> findAll(Pageable pageable);
+//    /* 전달 받은 정렬 기준으로 조회 (페이징) */
+//    Page<Inquiry> findAll(Pageable pageable);
 
-    Page<Inquiry> findAllByOrderByUpdatedAtDesc(LocalDateTime updatedAt, Pageable pageable);
+    Page<Inquiry> findAllByOrderByUpdatedAtDesc(Pageable pageable);
 
 }

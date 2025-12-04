@@ -6,6 +6,10 @@ import com.sesac.fmmall.Entity.Inquiry;
 import com.sesac.fmmall.Repository.InquiryRepository;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -21,8 +25,20 @@ public class InquiryService {
         return new InquiryResponseDTO(foundInquiry);
 //        return modelMapper.map(foundInquiry, InquiryResponseDTO.class);
     }
+    /* 2. 메뉴 최신순 상세 조회 */
+    public Page<InquiryResponseDTO> findAllSortedUpdatedAt(Pageable pageable) {
+        int page = pageable.getPageNumber() <= 0 ? 0 : pageable.getPageNumber() - 1;
+        int size = pageable.getPageSize();
+//        Sort sort = pageable.getSort();
+        String sortDir = "updatedAt";
 
-    /* 2. 문의 등록 */
+        PageRequest pageRequest = PageRequest.of(page, size, Sort.by(sortDir).descending());
+        Page<Inquiry> InquiryList = inquiryRepository.findAllByOrderByUpdatedAtDesc(pageRequest);
+        return InquiryList.map(InquiryResponseDTO::new);
+//        return modelMapper.map(foundInquiry, InquiryResponseDTO.class);
+    }
+
+    /* 3. 문의 등록 */
     @Transactional
     public InquiryResponseDTO registInquiry(InquiryRequestDTO requestDTO) {
 //        User user = userRepository.findById(requestDTO.getUserId())
@@ -42,7 +58,21 @@ public class InquiryService {
 
         // 저장 후, 생성된 Entity를 다시 DTO로 변환하여 반환
 //        return modelMapper.map(savedMenu, MenuResponseDTO.class);
-        return  new InquiryResponseDTO(savedInquiry);
+        return new InquiryResponseDTO(savedInquiry);
+    }
+
+    /* 4. 문의 수정 */
+    @Transactional
+    public InquiryResponseDTO modifyInquiryContent(int inquiryId, InquiryRequestDTO requestDTO) {
+
+        Inquiry foundInquiry = inquiryRepository.findById(inquiryId)
+                .orElseThrow(() -> new IllegalArgumentException("수정할 문의가 존재하지 않습니다."));
+
+        foundInquiry.modifyContent(
+            requestDTO.getInquiryContent()
+        );
+
+        return new InquiryResponseDTO(foundInquiry);
     }
 
 

@@ -36,5 +36,10 @@ public class Inquiry {
     private int productId;
 
 
+    public void modifyContent(String inquiryContent) {
+        this.inquiryContent = inquiryContent;
+        this.updatedAt = LocalDateTime.now();
+    }
+
 
 }
