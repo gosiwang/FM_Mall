@@ -1,5 +1,6 @@
 package com.sesac.fmmall.Entity;
 
+import com.sesac.fmmall.Constant.RefundStatus;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -23,8 +24,9 @@ public class RefundItem {
     @Column(name = "refund_price", nullable = false)
     private Integer refundPrice;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "refund_status", length = 20, nullable = false)
-    private String refundStatus;   // REQUESTED, COMPLETED 등
+    private RefundStatus refundStatus;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "refund_id", nullable = false)

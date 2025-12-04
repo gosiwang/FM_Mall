@@ -1,4 +1,4 @@
-package com.sesac.fmmall.DTO.Product;
+package com.sesac.fmmall.DTO.Adress;
 
 import com.sesac.fmmall.Entity.Address;
 import lombok.Getter;

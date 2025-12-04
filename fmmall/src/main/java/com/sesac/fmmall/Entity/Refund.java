@@ -1,6 +1,8 @@
 package com.sesac.fmmall.Entity;
 
 
+import com.sesac.fmmall.Constant.RefundType;
+import com.sesac.fmmall.Constant.YesNo;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -30,11 +32,13 @@ public class Refund {
     @Column(name = "total_amount", nullable = false)
     private Integer totalAmount;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "refund_type", length = 20, nullable = false)
-    private String refundType;   // FULL / PARTIAL 등
+    private RefundType refundType;
 
+    @Enumerated(EnumType.STRING)
     @Column(name = "is_true", length = 1, nullable = false)
-    private String isTrue;       // 'Y' / 'N' 등 (나중에 enum/boolean으로 감싸도 됨)
+    private YesNo isTrue;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "order_id", nullable = false)

@@ -46,12 +46,12 @@ public class Order {
             columnDefinition = "DATETIME DEFAULT CURRENT_TIMESTAMP")
     private LocalDateTime createdAt;
 
-    // user_id FK -> 일단 Long으로만 두고, 나중에 User 엔티티 연결해도 됨
+
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;
 
-    // 관계 매핑
+
 
     @OneToOne(mappedBy = "order", fetch = FetchType.LAZY)
     private Payment payment;
