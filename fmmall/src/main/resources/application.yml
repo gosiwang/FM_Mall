@@ -11,7 +11,3 @@ spring:
     url: jdbc:mysql://localhost:3306/fmmall
     username: ohgiraffers
     password: ohgiraffers
-
-jwt:
-  key: asdkfjlkawdsjfw390r82309rjlkasdfja213498dlk
-  time: 86400000
