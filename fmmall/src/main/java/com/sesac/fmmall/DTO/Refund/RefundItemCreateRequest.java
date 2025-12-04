@@ -10,6 +10,6 @@ import lombok.*;
 @Builder
 public class RefundItemCreateRequest {
 
-    private Long orderItemId;
+    private int orderItemId;
     private Integer refundQuantity;
 }

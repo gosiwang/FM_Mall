@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 public class PaymentMethodResponseDto {
 
-    private Long id;
+    private int id;
     private String cardCompany;
     private String maskedCardNumber;
     private Boolean isDefault;
