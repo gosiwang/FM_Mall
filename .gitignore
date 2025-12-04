@@ -1,0 +1,38 @@
+### OS ###
+.DS_Store
+Thumbs.db
+
+### IntelliJ ###
+.idea/
+*.iml
+out/
+
+### VS Code ###
+.vscode/
+
+### Build ###
+build/
+bin/
+target/
+
+### Logs ###
+*.log
+logs/
+
+### Gradle ###
+.gradle/
+gradle-app.setting
+
+
+src/main/resources/application.yml
+src/main/resources/application-local.yml
+src/main/resources/application-*.yml
+
+.env
+.env.*
+
+*.tmp
+*.temp
+
+node_modules/
+dist/
