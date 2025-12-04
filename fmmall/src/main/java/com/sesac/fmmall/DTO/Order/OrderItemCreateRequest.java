@@ -9,6 +9,6 @@ import lombok.*;
 @Builder
 public class OrderItemCreateRequest {
 
-    private Long productId;
+    private int productId;
     private Integer quantity;
 }

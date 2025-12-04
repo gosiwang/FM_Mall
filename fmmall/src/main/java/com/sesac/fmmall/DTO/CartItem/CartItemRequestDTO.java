@@ -9,6 +9,6 @@ import lombok.*;
 @Builder
 public class CartItemRequestDTO {
 
-    private Long productId;
+    private int productId;
     private int quantity;
 }

@@ -11,7 +11,7 @@ import java.time.LocalDateTime;
 @Builder
 public class PaymentSummaryResponse {
 
-    private Long paymentId;
+    private int paymentId;
     private String paymentMethodType;
     private LocalDateTime paidAt;
 }

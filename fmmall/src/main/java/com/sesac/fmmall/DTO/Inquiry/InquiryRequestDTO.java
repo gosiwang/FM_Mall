@@ -14,11 +14,4 @@ public class InquiryRequestDTO {
     private String inquiryContent;
     private int userId;
     private int productId;
-
-//    public int getUserId() {
-//        return userId;
-//    }
-//    public int getProductId() {
-//        return productId;
-//    }
 }

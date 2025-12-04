@@ -19,7 +19,7 @@ public class Order {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_id")
-    private Long id;
+    private int id;
 
     @Column(name = "receiver_name", length = 50, nullable = false)
     private String receiverName;

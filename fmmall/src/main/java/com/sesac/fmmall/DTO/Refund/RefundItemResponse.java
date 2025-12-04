@@ -9,9 +9,9 @@ import lombok.*;
 @Builder
 public class RefundItemResponse {
 
-    private Long refundItemId;
+    private int refundItemId;
 
-    private Long orderItemId;
+    private int orderItemId;
     private Integer refundQuantity;
     private Integer refundPrice;
     private String refundStatus;

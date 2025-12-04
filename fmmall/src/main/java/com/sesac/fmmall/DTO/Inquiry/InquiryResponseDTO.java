@@ -21,14 +21,7 @@ public class InquiryResponseDTO {
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy.MM.dd HH:mm:ss")
     private LocalDateTime updatedAt;
 
-//    @ManyToOne        // 일단 임시로 쓰기만 하고 사용 x
-//    @JoinColumn(name = "userId")
-//    private UserDTO user;
     private int userId;
-
-//    @ManyToOne        // 일단 임시로 쓰기만 하고 사용 x
-//    @JoinColumn(name = "productId")
-//    private ProductDTO product;
     private int productId;
 
     public InquiryResponseDTO(Inquiry inquiry) {
@@ -36,8 +29,8 @@ public class InquiryResponseDTO {
         this.inquiryContent = inquiry.getInquiryContent();
         this.createdAt = inquiry.getCreatedAt();
         this.updatedAt = inquiry.getUpdatedAt();
-        this.userId = inquiry.getUserId();
-        this.productId = inquiry.getProductId();
+        this.userId = inquiry.getUser().getId();
+        this.productId = inquiry.getProduct().getId();
 
     }
 }
