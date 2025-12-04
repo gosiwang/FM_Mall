@@ -51,8 +51,6 @@ public class InquiryService {
                 .productId(requestDTO.getProductId())
                 .build();
 
-        System.out.println(requestDTO.getInquiryContent());
-
         // 내부적으로 EntityManager.persist() 호출되어 영속성 컨텍스트로 들어간다.
         Inquiry savedInquiry = inquiryRepository.save(newInquiry);
 
