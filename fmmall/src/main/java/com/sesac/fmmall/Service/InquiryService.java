@@ -73,5 +73,17 @@ public class InquiryService {
         return new InquiryResponseDTO(foundInquiry);
     }
 
+    /* 5. 문의 삭제 */
+    @Transactional
+    public void deleteInquiry(int inquiryId) {
+
+        if (!inquiryRepository.existsById(inquiryId)) {
+            throw new IllegalArgumentException("삭제할 문의가 존재하지 않습니다.");
+
+        }
+
+        inquiryRepository.deleteById(inquiryId);
+    }
+
 
 }

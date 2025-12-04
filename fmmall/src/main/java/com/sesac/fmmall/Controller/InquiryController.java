@@ -50,4 +50,14 @@ public class InquiryController {
 //        신규 리소스 생성 시 201 CREATED 상태 코드 반환
         return ResponseEntity.ok(updatedInquiry);
     }
+
+    /* 5. 문의 삭제 */
+    @DeleteMapping("/{inquiryId}")
+    public ResponseEntity<Void> deleteinquiry(@PathVariable int inquiryId) {
+
+        inquiryService.deleteInquiry(inquiryId);
+
+//        삭제 성공 시 내용 없이 204 반환
+        return ResponseEntity.noContent().build();
+    }
 }
