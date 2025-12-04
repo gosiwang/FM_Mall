@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 public class RefundSummaryResponse {
 
-    private Long refundId;
+    private int refundId;
     private String refundType;
     private Integer totalAmount;
     private String isTrue;

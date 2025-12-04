@@ -11,8 +11,8 @@ import java.util.List;
 @Builder
 public class RefundCreateRequest {
 
-    private Long orderId;
-    private Long paymentId;
+    private int orderId;
+    private int paymentId;
 
     private String reasonCode;
     private String reasonDetail;

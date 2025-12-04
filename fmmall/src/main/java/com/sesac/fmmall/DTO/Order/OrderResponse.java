@@ -13,7 +13,7 @@ import java.util.List;
 @Builder
 public class OrderResponse {
 
-    private Long orderId;
+    private int orderId;
 
     private String receiverName;
     private String receiverPhone;
@@ -26,7 +26,7 @@ public class OrderResponse {
 
     private LocalDateTime createdAt;
 
-    private Long userId;
+    private int userId;
 
     private List<OrderItemResponse> items;
 

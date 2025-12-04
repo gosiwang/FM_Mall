@@ -6,7 +6,7 @@ import lombok.Getter;
 @Getter
 public class AddressResponseDto {
 
-    private Long id;
+    private int id;
     private String receiverName;
     private String receiverPhone;
     private String zipcode;

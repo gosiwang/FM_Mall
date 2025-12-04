@@ -9,13 +9,13 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface RefundRepository extends JpaRepository<Refund, Long> {
+public interface RefundRepository extends JpaRepository<Refund, Integer> {
 
 
     List<Refund> findByOrder(Order order);
-    List<Refund> findByOrder_Id(Long orderId);
+    List<Refund> findByOrder_Id(Integer orderId);
 
 
     List<Refund> findByPayment(Payment payment);
-    List<Refund> findByPayment_Id(Long paymentId);
+    List<Refund> findByPayment_Id(Integer paymentId);
 }
