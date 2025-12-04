@@ -43,4 +43,5 @@ public class CartItem {
         this.checkStatus = checkStatus;
     }
 
+
 }
