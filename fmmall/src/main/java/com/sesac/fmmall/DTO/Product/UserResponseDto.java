@@ -1,0 +1,22 @@
+package com.sesac.fmmall.DTO.Product;
+
+import com.sesac.fmmall.Entity.User;
+import lombok.Getter;
+
+@Getter
+public class UserResponseDto {
+
+    private Long id;
+    private String loginId;
+    private String userName;
+    private String userPhone;
+    private String role;
+
+    public UserResponseDto(User user) {
+        this.id = user.getId();
+        this.loginId = user.getLoginId();
+        this.userName = user.getUserName();
+        this.userPhone = user.getUserPhone();
+        this.role = user.getRole().getRole();
+    }
+}
