@@ -11,7 +11,7 @@ import java.util.List;
 @Builder
 public class RefundResponse {
 
-    private Long refundId;
+    private int refundId;
 
     private String reasonCode;
     private String reasonDetail;
@@ -19,8 +19,8 @@ public class RefundResponse {
     private String refundType;
     private String isTrue;
 
-    private Long orderId;
-    private Long paymentId;
+    private int orderId;
+    private int paymentId;
 
     private List<RefundItemResponse> items;
 }

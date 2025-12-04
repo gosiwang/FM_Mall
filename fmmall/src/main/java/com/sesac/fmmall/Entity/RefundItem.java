@@ -16,7 +16,7 @@ public class RefundItem {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "refund_item_id")
-    private Long id;
+    private int id;
 
     @Column(name = "refund_quantity", nullable = false)
     private Integer refundQuantity;

@@ -12,9 +12,9 @@ import java.time.LocalDate;
 @Builder
 public class OrderItemResponse {
 
-    private Long orderItemId;
+    private int orderItemId;
 
-    private Long productId;
+    private int productId;
     private String productName;
     private Integer productPrice;
     private Integer quantity;
