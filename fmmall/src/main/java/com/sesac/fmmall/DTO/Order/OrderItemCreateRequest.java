@@ -1,4 +1,4 @@
-package com.sesac.fmmall.DTO.CartItem;
+package com.sesac.fmmall.DTO.Order;
 
 import lombok.*;
 
@@ -7,8 +7,8 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class CartItemRequestDTO {
+public class OrderItemCreateRequest {
 
     private int productId;
-    private int quantity;
+    private Integer quantity;
 }

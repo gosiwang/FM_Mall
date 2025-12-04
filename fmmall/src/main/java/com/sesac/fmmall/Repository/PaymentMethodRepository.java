@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.List;
 import java.util.Optional;
 
-public interface PaymentMethodRepository extends JpaRepository<PaymentMethod,Long> {
+public interface PaymentMethodRepository extends JpaRepository<PaymentMethod,Integer> {
 
-    List<PaymentMethod> findByUserId(Long userId);
+    List<PaymentMethod> findByUserId(Integer userId);
 
-    Optional<PaymentMethod> findByUserIdAndIsDefault(Long userId, Boolean isDefault);
+    Optional<PaymentMethod> findByUserIdAndIsDefault(Integer userId, Boolean isDefault);
 }

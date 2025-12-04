@@ -11,8 +11,8 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 public class CartItemResponseDTO {
 
-    private Long cartItemId;
-    private Long productId;
+    private int cartItemId;
+    private int productId;
     private String productName;
     private int productPrice;
     private String productImage;
