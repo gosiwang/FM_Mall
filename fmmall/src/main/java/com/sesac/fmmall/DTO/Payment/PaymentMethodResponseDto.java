@@ -1,4 +1,4 @@
-package com.sesac.fmmall.DTO.Product;
+package com.sesac.fmmall.DTO.Payment;
 
 import com.sesac.fmmall.Entity.PaymentMethod;
 import lombok.Getter;
